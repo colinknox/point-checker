@@ -16,9 +16,25 @@ class Rectangle:
         self.x2 = x2
         self.y2 = y2
 
-point_one = Point(5, 4)
+    def contains_point(self, point):
+        x_axis = point.get_x()
+        y_axis = point.get_y()
+        condition_one = x_axis >= self.x1
+        condition_two = x_axis <= self.x2
+        condition_three = y_axis >= self.y1
+        condition_four = y_axis <= self.y2
 
-print(point_one.x)
-print(point_one.y)
-print(point_one.get_x())
-print(point_one.get_y())
+        if condition_one and condition_two and condition_three and condition_four:
+            return True
+        else:
+            return False
+
+        print(f"DEBUG: x-axis = {x_axis}")
+        print(f"DEBUG: y-axis = {y_axis}")
+
+
+
+point_one = Point(5, 4)
+rectangle = Rectangle(4, 3, 9, 4)
+
+print(rectangle.contains_point(point_one))
