@@ -28,13 +28,3 @@ class Rectangle:
             return True
         else:
             return False
-
-        print(f"DEBUG: x-axis = {x_axis}")
-        print(f"DEBUG: y-axis = {y_axis}")
-
-
-
-point_one = Point(5, 4)
-rectangle = Rectangle(4, 3, 9, 4)
-
-print(rectangle.contains_point(point_one))
